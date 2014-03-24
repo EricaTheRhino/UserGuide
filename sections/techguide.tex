@@ -3,16 +3,20 @@
 This covers connections that are required for Erica to operate at events.
 
 Important details.
-Power use \dots watts (\dots A).
-Physical dimensions.
-2.5m long
-1m wide
-1.5m tall
+\begin{itemize}
+	\item Power use \dots watts (\dots A).
+	\item Physical dimensions on plinth.
+	\begin{itemize}
+		\item 2.5m long
+		\item 1m wide
+		\item 1.5m tall
+	\end{itemize}
+\end{itemize}
 
 
 \section{External connections}
 
-Erica plinth connections.
+Ericia's plinth has two connection pannels one for power and one for data.
 
 \subsection{Power Connection plate}
 
@@ -32,7 +36,8 @@ Erica is fused at 13A, A fuse no larger than 13A should be used. Smaller values 
 
 Erica's data connection plate is located on the left of the rear of the plinth.
 
-The data connection plate is laid out as follows
+\begin{table}[h]
+
 
 \begin{tabular}[h]{cccc}
 
@@ -41,9 +46,14 @@ R audio XLR & & USB to interface & Internal network connection \\
 
 \end{tabular}
 
+\caption{Layout of data connection plate}
+
+\end{table}
+
 \subsubsection{audio out}
 
-The two XLR connections provide line level balanced audio out for connection to balanced audio systems. The upper XLR connector is the left channel the lower connector is the right channel.
+The two XLR connections provide line level balanced audio out for connection to balanced audio systems. 
+The upper XLR connector is the left channel the lower connector is the right channel.
 
 The 6.35mm audio jack provides line level unbalanced stereo audio out.
 
@@ -61,11 +71,16 @@ This is connected internally to the interface pi, this is intended to attach a k
 
 \subsubsection{Network connections}
 
-These are Neutrik cat5 ethercon connectors, these will accept rj45 terminated cat5/6 cables with or without cat5 ethercon housings. The different cat6 version of ethercon is not compatible.
+These are Neutrik cat5 ethercon connectors, these will accept rj45 terminated cat5/6 cables with or without cat5 ethercon housings. 
+The different cat6 version of ethercon is not compatible.
 
-The upper connection is for External network connectivity. This port is capable of 10/100 operation. This connection should offer IPv4 addresses over DHCP and provide internet connectivity. Erica can operate with either IPv4 or IPv6 connectivity.
+The upper connection is for External network connectivity. 
+This port is capable of 10/100 operation. This connection should offer IPv4 addresses over DHCP and provide internet connectivity. 
+Erica can operate with either IPv4 or IPv6 connectivity.
 
-The lower connection connects to Erica's internal network. This port is capable of 10/100/1000 operation. This is intended for external components that access Erica's internal network.
+The lower connection connects to Erica's internal network. 
+This port is capable of 10/100/1000 operation. 
+This is intended for external components that access Erica's internal network.
 
 
 
