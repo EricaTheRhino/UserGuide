@@ -1,0 +1,71 @@
+\chapter{Erica event setup}
+
+This covers connections that are required for Erica to operate at events.
+
+Important details.
+Power use \dots watts (\dots A).
+Physical dimensions.
+2.5m long
+1m wide
+1.5m tall
+
+
+\section{External connections}
+
+Erica plinth connections.
+
+\subsection{Power Connection plate}
+
+Erica's power connection plate is located on the right of the rear of the plinth.
+
+\subsubsection{power connections}
+Erica is designed for use with 240vac 50hz power systems. Erica must not be connected to other voltage or frequency power systems. 
+
+Erica uses Neutrik powercon connectors for power.
+The bottom blue connector is for power in, Erica is fused internally at 13A so powerdraw will not be more than this.
+The upper grey connector is power out, this is capable of a little less than \dots as it shares the same fuse with the electronics inside Erica.
+
+\subsubsection{fuseing}
+Erica is fused at 13A, A fuse no larger than 13A should be used. Smaller values as low as \dots may be used if a 13A fuse is unavailable although this will limit the power that can be drawn from the plinth power out.
+
+\subsection{Data connection plate}
+
+Erica's data connection plate is located on the left of the rear of the plinth.
+
+The data connection plate is laid out as follows
+
+\begin{tabular}[h]{cccc}
+
+L audio XLR & 6.35mm audio jack & HDMI from interface & External network connection \\
+R audio XLR & & USB to interface & Internal network connection \\
+
+\end{tabular}
+
+\subsubsection{audio out}
+
+The two XLR connections provide line level balanced audio out for connection to balanced audio systems. The upper XLR connector is the left channel the lower connector is the right channel.
+
+The 6.35mm audio jack provides line level unbalanced stereo audio out.
+
+\subsubsection{HDMI out}
+
+This is a Neutrik HDMI connector, it will accept either a Neutrik rugadised HDMI cable or standard USB cables.
+
+The HDMI connection is connected to the interface pi, this is intended mainly for debugging.
+
+\subsubsection{USB in}
+
+This is a Neutrik USB connector, it will accept either Neutrik rugadised USB cable or standard USB cables.
+
+This is connected internally to the interface pi, this is intended to attach a keyboard during debugging.
+
+\subsubsection{Network connections}
+
+These are Neutrik cat5 ethercon connectors, these will accept rj45 terminated cat5/6 cables with or without cat5 ethercon housings. The different cat6 version of ethercon is not compatible.
+
+The upper connection is for External network connectivity. This port is capable of 10/100 operation. This connection should offer IPv4 addresses over DHCP and provide internet connectivity. Erica can operate with either IPv4 or IPv6 connectivity.
+
+The lower connection connects to Erica's internal network. This port is capable of 10/100/1000 operation. This is intended for external components that access Erica's internal network.
+
+
+
