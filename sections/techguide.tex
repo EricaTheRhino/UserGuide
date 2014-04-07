@@ -1,86 +1,85 @@
-\chapter{Erica event setup}
-
+\chapter{Erica Event Setup}
 This covers connections that are required for Erica to operate at events.
 
-Important details.
-\begin{itemize}
-	\item Power use \dots watts (\dots A).
-	\item Physical dimensions on plinth.
-	\begin{itemize}
-		\item 2.5m long
-		\item 1m wide
-		\item 1.5m tall
-	\end{itemize}
-\end{itemize}
+Important details abou Erica:
+\begin{description}
+	\item[Power use]{\dots watts (\dots A)}
+	\item[Physical dimensions (on plinth)]{2500x1000x1500mm (LxWxH)}
+\end{description}
 
 
-\section{External connections}
+\section{External Connections}
+Erica's plinth has two connection panels, one for power and the other for data.
 
-Ericia's plinth has two connection pannels one for power and one for data.
 
-\subsection{Power Connection plate}
-
+\subsection{Power Connection Panel}
 Erica's power connection plate is located on the right of the rear of the plinth.
 
-\subsubsection{power connections}
-Erica is designed for use with 240vac 50hz power systems. Erica must not be connected to other voltage or frequency power systems. 
 
-Erica uses Neutrik powercon connectors for power.
-The bottom blue connector is for power in, Erica is fused internally at 13A so powerdraw will not be more than this.
-The upper grey connector is power out, this is capable of a little less than \dots as it shares the same fuse with the electronics inside Erica.
-
-\subsubsection{fuseing}
+\subsubsection{Fusing}
 Erica is fused at 13A, A fuse no larger than 13A should be used. Smaller values as low as \dots may be used if a 13A fuse is unavailable although this will limit the power that can be drawn from the plinth power out.
 
-\subsection{Data connection plate}
 
+\subsubsection{Power Connections}
+Erica is designed for use with 240V AC 50Hz power systems. Erica must not be connected to other voltage or frequency power systems. 
+
+Erica has two Neutrik powerCON connectors for power. The bottom blue connector is for power in, Erica is fused internally at 13A so powerdraw will not be more than this.  The upper grey connector is power out, this is capable of a little less than \dots A, as it shares the same fuse with the electronics inside Erica.
+
+
+\subsection{Data Connection Panel}
 Erica's data connection plate is located on the left of the rear of the plinth.
 
 \begin{table}[h]
-
-
-\begin{tabular}[h]{cccc}
-
-L audio XLR & 6.35mm audio jack & HDMI from interface & External network connection \\
-R audio XLR & & USB to interface & Internal network connection \\
-
+\centering
+\begin{tabular}[h]{|c|c|c|c|}
+\hline
+Left & 6.35mm & HDMI from & External \\
+Audio XLR & Audio Jack & Interface & Ethernet in \\
+\hline
+Right & Blank & USB to & Internal \\
+Audio XLR & & Interface & Ethernet out \\
+\hline
 \end{tabular}
-
-\caption{Layout of data connection plate}
-
+\caption{Layout of Data Connection Panel} 
 \end{table}
 
-\subsubsection{audio out}
 
-The two XLR connections provide line level balanced audio out for connection to balanced audio systems. 
-The upper XLR connector is the left channel the lower connector is the right channel.
+\subsubsection{Audio Out}
+The two XLR connections provide line level balanced audio out for connection to balanced audio systems.  The upper XLR connector is the left channel the lower connector is the right channel.
 
 The 6.35mm audio jack provides line level unbalanced stereo audio out.
 
-\subsubsection{HDMI out}
+\subsubsection{HDMI Out}
+This is a Neutrik HDMI connector, it will accept either a Neutrik ruggedised HDMI connector or standard HDMI connector.  The HDMI connection is connected to the interface Raspberry Pi, this is generally only intended for debugging.
 
-This is a Neutrik HDMI connector, it will accept either a Neutrik rugadised HDMI cable or standard USB cables.
+\subsubsection{USB In}
+This is a Neutrik USB connector, it will accept either Neutrik ruggedised USB connector or standard USB connectors.  This is connected internally to the interface pi, this is intended to attach a keyboard during debugging.
 
-The HDMI connection is connected to the interface pi, this is intended mainly for debugging.
+\subsubsection{Network Connections}
+These are Neutrik Cat 5 EtherCON connectors, these will accept RJ45 terminated Cat 5/6 cables with or without Cat 5 EtherCON housings. 
+The Cat 6 version of EtherCON connector is incompatible.
 
-\subsubsection{USB in}
+The upper connection is for External network connectivity.  This port is capable of 10/100 MBit operation. This connection should offer IPv4 addresses over DHCP and provide Internet connectivity.
 
-This is a Neutrik USB connector, it will accept either Neutrik rugadised USB cable or standard USB cables.
-
-This is connected internally to the interface pi, this is intended to attach a keyboard during debugging.
-
-\subsubsection{Network connections}
-
-These are Neutrik cat5 ethercon connectors, these will accept rj45 terminated cat5/6 cables with or without cat5 ethercon housings. 
-The different cat6 version of ethercon is not compatible.
-
-The upper connection is for External network connectivity. 
-This port is capable of 10/100 operation. This connection should offer IPv4 addresses over DHCP and provide internet connectivity. 
-Erica can operate with either IPv4 or IPv6 connectivity.
-
-The lower connection connects to Erica's internal network. 
-This port is capable of 10/100/1000 operation. 
-This is intended for external components that access Erica's internal network.
+The lower connection connects to Erica's internal network.  This port is capable of 10/100/1000 MBit operation.  This is intended for connection external components so they can access Erica's internal network.
 
 
+\section{Internal Connections}
+When Erica is in transit the Pi board that has the five Raspberry Pis and 8 port Ethernet hub attached should be disconnected and removed.  When the Pi board is reconnected the following connections need to be made.
 
+\subsection{Power}
+5V and 12V
+
+\subsection{Network}
+
+\subsection{HDMI}
+
+\subsection{USB}
+
+\subsection{Audio}
+
+\subsection{LEDs}
+
+\subsection{Eyes}
+
+\subsection{Ears}

@@ -5,6 +5,7 @@
 *.aux
 *.bbl
 *.blg
+*.d
 *.dvi
 *.fdb_latexmk
 *.glg
@@ -33,6 +34,7 @@
 *.tdo
 
 # from build script
-Report.d
-Report.fls
+installGuide.auxbbl.make.temp
+installGuide.d
+installGuide.fls
 *.make
